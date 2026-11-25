@@ -1,2 +1,47 @@
-# rag-engine
-"An offline, bilingual (Persian/English) RAG desktop app for accurate querying of engineering PDFs. Built with Python, PyQt6, LangChain, and Ollama. | سیستم پرسش هوشمند و آفلاین از اسناد مهندسی با دقت بالا و بدون توهم."
+# 🧠 سیستم پرسش هوشمند از اسناد مهندسی (RAG)
+
+یک نرم‌افزار دسکتاپ آفلاین و هوشمند برای پرسش و پاسخ از اسناد فنی و مهندسی (استانداردهای ISO, API و ...) با استفاده از هوش مصنوعی.
+
+![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)
+![PyQt6](https://img.shields.io/badge/PyQt6-GUI-green.svg)
+![Ollama](https://img.shields.io/badge/Ollama-Local_AI-orange.svg)
+![License](https://img.shields.io/badge/License-MIT-yellow.svg)
+
+---
+
+## ✨ ویژگی‌ها
+
+- 🎯 **پاسخ‌های دقیق و مستند** از دل اسناد PDF (بدون توهم)
+- 🌐 **پشتیبانی دو زبانه** (فارسی و انگلیسی)
+- 🔒 **کاملاً آفلاین** - بدون نیاز به اینترنت (با Ollama)
+- 🎨 **رابط گرافیکی زیبا** با PyQt6
+- ⚡ **جستجوی معنایی** با شباهت کسینوسی (Cosine Similarity)
+- 📊 **پنل دیباگ** برای مشاهده‌ی تکه‌های پیدا شده از سند
+- 🚀 **بدون هنگ کردن** با استفاده از QThread
+
+---
+
+## 🛠️ تکنولوژی‌های استفاده‌شده
+
+| تکنولوژی | کاربرد |
+|----------|--------|
+| **LangChain** | چارچوب اصلی RAG |
+| **Ollama** | اجرای مدل‌های هوش مصنوعی به صورت محلی |
+| **Qwen 2.5:3b** | مدل زبانی برای تولید پاسخ |
+| **nomic-embed-text** | مدل امبدینگ برای تبدیل متن به بردار |
+| **ChromaDB** | پایگاه داده برداری برای جستجوی سریع |
+| **PyQt6** | رابط گرافیکی دسکتاپ |
+| **PyMuPDF** | خواندن فایل‌های PDF |
+
+---
+
+## 📦 نصب و راه‌اندازی
+
+### پیش‌نیازها
+1. **Python 3.10+** را نصب کنید
+2. **Ollama** را از [ollama.com](https://ollama.com) دانلود و نصب کنید
+3. مدل‌های مورد نیاز را در Ollama دانلود کنید:
+
+```bash
+ollama pull qwen2.5:3b
+ollama pull nomic-embed-text
